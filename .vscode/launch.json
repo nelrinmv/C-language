@@ -5,15 +5,22 @@
             "name": "Run C Program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb.exe",
-            "preLaunchTask": "Build C program"
+            "preLaunchTask": "Build C program",
+            "windows": {
+                "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "miDebuggerPath": "gdb.exe"
+            },
+            "linux": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "miDebuggerPath": "/usr/bin/gdb"
+            }
         }
     ]
 }
