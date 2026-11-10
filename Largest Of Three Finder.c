@@ -6,15 +6,15 @@ int main(){
     scanf("%d,%d,%d", &a, &b, &c);
     if (a > b){
         if (a > c){
-            printf("a is greater than b and c.");
+            printf("%d is greater.",a);
         } else {
-            printf("c is greater than a and b.");
+            printf("%d is greater.",c);
         };
     } else {
         if (b > c){
-            printf("b is greater than a and c.");
+            printf("%d is greater.",b);
         } else {
-            printf("c is greater than a and b.");
+            printf("%d is greater.",c);
         };
     };
     return 0;

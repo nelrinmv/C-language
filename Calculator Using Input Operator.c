@@ -12,7 +12,13 @@ int main(){
             printf("The sum of the number is %d", a + b);
             break;
         case '-':
-            printf("The Subtraction of the number is %d", a - b);
+            printf("The subtraction of the number is %d", a - b);
+            break;
+        case '*':
+            printf("The product of the number is %d", a * b);
+            break;
+        case '/':
+            printf("The division of the number is %d", a / b);
             break;
         default:
             printf("The operation input is incorrect.");
