@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int i, j, r1, c1, r2, c2;
+    int i, j, k, r1, c1, r2, c2;
     int a[100][100], b[100][100], mul[100][100];
 
     printf("Enter the Order of Matrix One: ");
@@ -19,7 +19,7 @@ int main(){
 
         }
 
-        printf("\033[2J\033[H"); // Clear screen and move cursor to top-left
+        printf("\033[2J\033[H"); // Clear screen
 
         for (i = 0; i < r2; i++){
             for (j = 0; j < c2; j++){
@@ -28,6 +28,29 @@ int main(){
             }
 
         }
+
+        printf("\033[2J\033[H"); // Clear screen
+        
+        for (i = 0; i < r2; i++){
+            for (j = 0; j < c1; j++){
+                for (k=0; k<c2; k++){
+                    mul[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        };
+        
+        printf("\nThe Product of Matrix: ");
+        
+        for (i = 0; i < r2; i++){
+            for (j = 0; j < c1; j++){
+                printf("%d\t", mul[i][j]);
+                if (j == c1 -1){
+                    printf("\n");
+                };
+            }
+        }
+        
+
     } else {
         printf("The multiplication of these matrix of these order is not possible.\n");
     };
