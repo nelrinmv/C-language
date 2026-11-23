@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int cat = 61;   // Actual variable declaration 
-    int *ip1;        // Pointer variable declaration
+    int ipadd = 61;  
+    int *ip;    
 
-    ip1 = &cat;      // Store address of var in pointer variable 
+    ip = &ipadd;     
     
-    printf("Address of variable cat: %x\n", &cat);
-    printf("Address stored in ip1 variable: %p\n", ip1);
-    printf("Value of *ip1 variable: %d\n", *ip1);  
+    printf("Address of variable ipadd: %x\n", &ipadd);
+    printf("Address stored in ip variable: %x\n", ip);
+    printf("Value of *ip variable: %d\n", *ip);  
 
     return 0; 
 }

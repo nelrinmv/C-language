@@ -16,7 +16,6 @@ int main() {
     printf("Enter the line number to delete: ");
     scanf("%d", &delete_line);
 
-    // Copy all lines except the line to be deleted
     while (fgets(buffer, sizeof(buffer), fp) != NULL) {
         if (current_line != delete_line) {
             fputs(buffer, temp);
@@ -30,11 +29,10 @@ int main() {
     remove("sample.txt");
     rename("temp.txt", "sample.txt");
 
-    // Append multiple lines to the end of the file
     fp = fopen("sample.txt", "a");
     printf("How many lines do you want to append? ");
     scanf("%d", &n);
-    getchar(); // Clear newline from input buffer
+    getchar(); 
 
     printf("Enter the lines:\n");
     for (i = 0; i < n; i++) {
